@@ -115,12 +115,12 @@ export default function AppNavbar() {
                     <Dropdown.Toggle as="button" className="btn btn-link text-dark p-0 border-0 shadow-none d-flex align-items-center gap-1">
                       <i className="bi bi-person-circle fs-4 text-primary"></i>
                       <span className="d-none d-lg-inline fw-semibold small text-secondary ms-1">
-                        {user.fullName.split(' ')[0]}
+                        {(user.fullName || user.name || 'User').split(' ')[0]}
                       </span>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="shadow border-0 rounded-3">
                       <div className="px-3 py-2 border-bottom">
-                        <div className="fw-bold text-dark">{user.fullName}</div>
+                        <div className="fw-bold text-dark">{user.fullName || user.name || 'User'}</div>
                         <div className="small text-muted">
                           {user.village} ({user.wardNumber || 'Ward 1'})
                         </div>
